@@ -1,3 +1,3 @@
-# mobi-plugin-container
+# mobi-plugin-layout
 
-The container for Mobi.css
+The layout plugin for Mobi.css

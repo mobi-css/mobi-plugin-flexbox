@@ -1,7 +1,7 @@
 {
-  "name": "mobi-plugin-container",
+  "name": "mobi-plugin-layout",
   "version": "0.0.1",
-  "description": "The container for Mobi.css",
+  "description": "The layout for Mobi.css",
   "main": "index.scss",
   "scripts": {
     "test": "npm run lint",
@@ -10,19 +10,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mobi-css/mobi-plugin-container.git"
+    "url": "git+https://github.com/mobi-css/mobi-plugin-layout.git"
   },
   "keywords": [
     "mobi-css",
     "mobi-plugin",
-    "mobi-plugin-container"
+    "mobi-plugin-layout"
   ],
   "author": "xcatliu <xcatliu@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mobi-css/mobi-plugin-container/issues"
+    "url": "https://github.com/mobi-css/mobi-plugin-layout/issues"
   },
-  "homepage": "http://getmobicss.com/plugins/mobi-plugin-container",
+  "homepage": "http://getmobicss.com/plugins/mobi-plugin-layout",
   "devDependencies": {
     "stylelint": "^7.9.0",
     "stylelint-config-standard": "^16.0.0"

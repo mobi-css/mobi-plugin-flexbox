@@ -1,0 +1,19 @@
+.container {
+  background-color: $color-background;
+  max-width: $max-width-container;
+  min-width: $min-width-container;
+  padding: 0 $width-gap $width-gap;
+  width: 100%;
+}
+
+@media (max-width: $width-breakpoint - 1px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: $width-breakpoint) {
+  .show-on-mobile {
+    display: none;
+  }
+}
