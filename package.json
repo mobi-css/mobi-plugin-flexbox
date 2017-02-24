@@ -1,6 +1,6 @@
 {
   "name": "mobi-plugin-container",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "The container for Mobi.css",
   "main": "index.scss",
   "scripts": {
