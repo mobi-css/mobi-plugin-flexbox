@@ -1,0 +1,7 @@
+.container {
+  background-color: $color-background;
+  max-width: $max-width-container;
+  min-width: $min-width-container;
+  padding: 0 $width-gap $width-gap;
+  width: 100%;
+}
