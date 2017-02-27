@@ -13,7 +13,273 @@
           <link rel="stylesheet" href="assets\css\mobi-plugin-flexbox.min.css" />
         </head>
         <body>
-          <h1 id="mobi-plugin-flexbox">mobi-plugin-flexbox</h1>
+          <style>
+  .text-center {
+    text-align: center;
+  }
+  .site-box {
+    border: 1px solid hsla(120, 40%, 55%, 0.3);
+    background-color: hsla(120, 40%, 55%, 0.15);
+  }
+</style>
+<div class="flex-center">
+  <div class="container">
+<div class="text-center">
+<h1 id="flexbox-mobicss-plugin">Flexbox - Mobi.css Plugin</h1>
+<p>The built-in flexbox plugin for <a href="http://getmobicss.com">Mobi.css</a></p>
+</div>
+<div class="flex-center units-gap-big">
+  <div class="unit-0">
+    <a href="https://github.com/mobi-css/mobi-plugin-flexbox/releases" class="btn">Download</a>
+  </div>
+  <div class="unit-0">
+    <a href="https://github.com/mobi-css/mobi-plugin-flexbox/" class="btn">GitHub</a>
+  </div>
+</div>
+<hr class="top-gap-big"/>
+<h2 id="introduction">Introduction</h2>
+<blockquote>
+<p>Mobi.css is a themeable, pluginable, mobile-first css framework.</p>
+</blockquote>
+<p>This is the flexbox plugin for <a href="http://getmobicss.com">Mobi.css</a>, you can use it within <a href="http://getmobicss.com">Mobi.css</a> framework, or simply use the <a href="https://github.com/mobi-css/mobi-plugin-flexbox/releases">standalone css library</a> without using Mobi.css framework.</p>
+<p>You can also insert the CDN link to your <code>&lt;head&gt;</code> to try the standalone version:</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/mobi-plugin-flexbox/dist/mobi-plugin-flexbox.min.css&quot; /&gt;
+</code></pre>
+<h2 id="usage">Usage</h2>
+<h3 id="flexbox-container-and-units">Flexbox Container and Units</h3>
+<p>First of all, let's create a <code>.flex-left</code> container which contains several <code>.unit</code>s. In this case, <code>.flex-left</code>'s width is divided equally between <code>.unit</code>s.</p>
+<div class="flex-left top-gap text-center">
+  <div class="unit site-box">unit</div>
+  <div class="unit site-box">unit</div>
+  <div class="unit site-box">unit</div>
+</div>
+<div class="flex-left top-gap text-center">
+  <div class="unit site-box">unit</div>
+  <div class="unit site-box">unit</div>
+  <div class="unit site-box">unit</div>
+  <div class="unit site-box">unit</div>
+  <div class="unit site-box">unit</div>
+</div>
+<pre><code class="language-html">&lt;div class=&quot;flex-left&quot;&gt;
+  &lt;div class=&quot;unit&quot;&gt;unit&lt;/div&gt;
+  &lt;div class=&quot;unit&quot;&gt;unit&lt;/div&gt;
+  &lt;div class=&quot;unit&quot;&gt;unit&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex-left&quot;&gt;
+  &lt;div class=&quot;unit&quot;&gt;unit&lt;/div&gt;
+  &lt;div class=&quot;unit&quot;&gt;unit&lt;/div&gt;
+  &lt;div class=&quot;unit&quot;&gt;unit&lt;/div&gt;
+  &lt;div class=&quot;unit&quot;&gt;unit&lt;/div&gt;
+  &lt;div class=&quot;unit&quot;&gt;unit&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Secondly, let's see how to achieve a maximum 4# grid.</p>
+<div class="flex-left top-gap text-center">
+  <div class="unit-1 site-box">.unit-1</div>
+</div>
+<div class="flex-left top-gap text-center">
+  <div class="unit-1-2 site-box">.unit-1-2</div>
+  <div class="unit-1-2 site-box">.unit-1-2</div>
+</div>
+<div class="flex-left top-gap text-center">
+  <div class="unit-1-3 site-box">.unit-1-3</div>
+  <div class="unit-2-3 site-box">.unit-2-3</div>
+</div>
+<div class="flex-left top-gap text-center">
+  <div class="unit-1-4 site-box">.unit-1-4</div>
+  <div class="unit-3-4 site-box">.unit-3-4</div>
+</div>
+<div class="flex-left top-gap text-center">
+  <div class="unit-1-2 site-box">.unit-1-2</div>
+  <div class="unit-1-4 site-box">.unit-1-4</div>
+</div>
+<pre><code class="language-html">&lt;div class=&quot;flex-left&quot;&gt;
+  &lt;div class=&quot;unit-1-2&quot;&gt;.unit-1-2&lt;/div&gt;
+  &lt;div class=&quot;unit-1-2&quot;&gt;.unit-1-2&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex-left&quot;&gt;
+  &lt;div class=&quot;unit-1-3&quot;&gt;.unit-1-3&lt;/div&gt;
+  &lt;div class=&quot;unit-2-3&quot;&gt;.unit-2-3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex-left&quot;&gt;
+  &lt;div class=&quot;unit-1-4&quot;&gt;.unit-1-4&lt;/div&gt;
+  &lt;div class=&quot;unit-3-4&quot;&gt;.unit-3-4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex-left&quot;&gt;
+  &lt;div class=&quot;unit-1-2&quot;&gt;.unit-1-2&lt;/div&gt;
+  &lt;div class=&quot;unit-1-4&quot;&gt;.unit-1-4&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Finally, we can use <code>.unit-0</code> as a custom size unit. Set a width to it, or let the content decide the width.</p>
+<div class="flex-left top-gap text-center">
+  <div class="unit site-box">.unit</div>
+  <div class="unit-0 site-box" style="width:200px">.unit-0 which has 200px width</div>
+  <div class="unit site-box">.unit</div>
+</div>
+<div class="flex-left top-gap text-center">
+  <div class="unit-0 site-box">.unit-0 which has no width set</div>
+  <div class="unit site-box">.unit</div>
+  <div class="unit-1-4 site-box">.unit-1-4</div>
+</div>
+<pre><code class="language-html">&lt;div class=&quot;flex-left&quot;&gt;
+  &lt;div class=&quot;unit&quot;&gt;.unit&lt;/div&gt;
+  &lt;div class=&quot;unit-0&quot; style=&quot;width:200px&quot;&gt;.unit-0 which has 200px width&lt;/div&gt;
+  &lt;div class=&quot;unit&quot;&gt;.unit&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex-left&quot;&gt;
+  &lt;div class=&quot;unit-0&quot;&gt;.unit-0 which has no width set&lt;/div&gt;
+  &lt;div class=&quot;unit&quot;&gt;.unit&lt;/div&gt;
+  &lt;div class=&quot;unit-1-4&quot;&gt;.unit-1-4&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="flexbox-aligning">Flexbox Aligning</h3>
+<p>Forget <code>margin:0 auto</code>. We can align easily with flexbox!</p>
+<div class="flex-left site-box top-gap">
+  <div class="site-box">.flex-left > div</div>
+</div>
+<div class="flex-center site-box top-gap">
+  <div class="site-box">.flex-center > div</div>
+</div>
+<div class="flex-right site-box top-gap">
+  <div class="site-box">.flex-right > div</div>
+</div>
+<div class="flex-top site-box top-gap" style="height:60px;">
+  <div class="site-box">.flex-top > div</div>
+</div>
+<div class="flex-middle site-box top-gap" style="height:60px;">
+  <div class="site-box">.flex-middle > div</div>
+</div>
+<div class="flex-bottom site-box top-gap" style="height:60px;">
+  <div class="site-box">.flex-bottom > div</div>
+</div>
+<div class="flex-center flex-middle site-box top-gap" style="height:60px;">
+  <div class="site-box">.flex-center.flex-middle > div</div>
+</div>
+<pre><code class="language-html">&lt;div class=&quot;flex-left&quot;&gt;
+  &lt;div&gt;.flex-left &gt; div&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex-center&quot;&gt;
+  &lt;div&gt;.flex-center &gt; div&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex-right&quot;&gt;
+  &lt;div&gt;.flex-right &gt; div&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex-top&quot; style=&quot;height:60px;&quot;&gt;
+  &lt;div&gt;.flex-top &gt; div&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex-middle&quot; style=&quot;height:60px;&quot;&gt;
+  &lt;div&gt;.flex-middle &gt; div&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex-bottom&quot; style=&quot;height:60px;&quot;&gt;
+  &lt;div&gt;.flex-bottom &gt; div&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex-center flex-middle&quot; style=&quot;height:60px;&quot;&gt;
+  &lt;div&gt;.flex-center.flex-middle &gt; div&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="vertical-flexbox">Vertical Flexbox</h3>
+<p>We can use <code>.flex-vertical</code> to easily achieve vertical flexbox layout.</p>
+<div class="flex-vertical top-gap text-center" style="height:200px;">
+  <div class="unit-0 site-box">.unit-0</div>
+  <div class="unit site-box">.unit</div>
+  <div class="unit-1-4 site-box">.unit-1-4</div>
+</div>
+<pre><code class="language-html">&lt;div class=&quot;flex-vertical&quot; style=&quot;height:200px;&quot;&gt;
+  &lt;div class=&quot;unit-0&quot;&gt;.unit-0&lt;/div&gt;
+  &lt;div class=&quot;unit&quot;&gt;.unit&lt;/div&gt;
+  &lt;div class=&quot;unit-1-4&quot;&gt;.unit-1-4&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="wrapable-flexbox">Wrapable flexbox</h3>
+<p>By default the <code>flex-wrap</code> of flexbox container is set to <code>nowrap</code>, this is to prevent some unexpected wrap. We can set it to <code>wrap</code> using <code>.flex-wrap</code>:</p>
+<div class="flex-left top-gap text-center">
+  <div class="unit-0 site-box">.unit-0 with a lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot of text</div>
+  <div class="unit site-box">.unit</div>
+  <div class="unit-1-4 site-box">.unit-1-4</div>
+</div>
+<div class="flex-left flex-wrap top-gap text-center">
+  <div class="unit-0 site-box">.flex-wrap > .unit-0 with a lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot of text</div>
+  <div class="unit site-box">.unit</div>
+  <div class="unit-1-4 site-box">.unit-1-4</div>
+</div>
+<pre><code class="language-html">&lt;div class=&quot;flex-left&quot;&gt;
+  &lt;div class=&quot;unit-0&quot;&gt;.unit-0 with a lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot of text&lt;/div&gt;
+  &lt;div class=&quot;unit&quot;&gt;.unit&lt;/div&gt;
+  &lt;div class=&quot;unit-1-4&quot;&gt;.unit-1-4&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;flex-left flex-wrap&quot;&gt;
+  &lt;div class=&quot;unit-0&quot;&gt;.flex-wrap &gt; .unit-0 with a lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot of text&lt;/div&gt;
+  &lt;div class=&quot;unit&quot;&gt;.unit&lt;/div&gt;
+  &lt;div class=&quot;unit-1-4&quot;&gt;.unit-1-4&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="unit-1-on-mobile">Unit 1 on Mobile</h3>
+<p>Sometimes we need to show <code>.unit-1-3</code> on desktop, and <code>.unit-1</code> on mobile. We can use <code>.unit-1-on-mobile</code> inside <code>.flex-wrap</code> to achieve this:</p>
+<div class="flex-left flex-wrap top-gap text-center">
+  <div class="unit-1-3 unit-1-on-mobile site-box">.flex-wrap > .unit-1-3.unit-1-on-mobile</div>
+  <div class="unit-2-3 unit-1-on-mobile site-box">.flex-wrap > .unit-2-3.unit-1-on-mobile</div>
+</div>
+<pre><code class="language-html">&lt;div class=&quot;flex-left flex-wrap&quot;&gt;
+  &lt;div class=&quot;unit-1-3 unit-1-on-mobile&quot;&gt;.flex-wrap &gt; .unit-1-3.unit-1-on-mobile&lt;/div&gt;
+  &lt;div class=&quot;unit-2-3 unit-1-on-mobile&quot;&gt;.flex-wrap &gt; .unit-2-3.unit-1-on-mobile&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="units-gap">Units Gap</h3>
+<p>In all of the above examples, the <code>.unit*</code> has no left and right paddings, it may not convenient sometimes. We can add <code>.units-gap</code> and <code>.units-gap-big</code> to the flexbox container to add gaps between <code>.unit*</code>s:</p>
+<div class="flex-left units-gap top-gap text-center">
+  <div class="unit-0 site-box">.units-gap > .unit-0</div>
+  <div class="unit site-box">.units-gap > .unit</div>
+  <div class="unit-1-4 site-box">.units-gap > .unit-1-4</div>
+</div>
+<pre><code class="language-html">&lt;div class=&quot;flex-left units-gap top-gap text-center&quot;&gt;
+  &lt;div class=&quot;unit-0 site-box&quot;&gt;.units-gap &gt; .unit-0&lt;/div&gt;
+  &lt;div class=&quot;unit site-box&quot;&gt;.units-gap &gt; .unit&lt;/div&gt;
+  &lt;div class=&quot;unit-1-4 site-box&quot;&gt;.units-gap &gt; .unit-1-4&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="flex-left units-gap-big top-gap text-center">
+  <div class="unit-0 site-box">.units-gap-big > .unit-0</div>
+  <div class="unit site-box">.units-gap-big > .unit</div>
+  <div class="unit-1-4 site-box">.units-gap-big > .unit-1-4</div>
+</div>
+<pre><code class="language-html">&lt;div class=&quot;flex-left units-gap-big top-gap text-center&quot;&gt;
+  &lt;div class=&quot;unit-0 site-box&quot;&gt;.units-gap-big &gt; .unit-0&lt;/div&gt;
+  &lt;div class=&quot;unit site-box&quot;&gt;.units-gap-big &gt; .unit&lt;/div&gt;
+  &lt;div class=&quot;unit-1-4 site-box&quot;&gt;.units-gap-big &gt; .unit-1-4&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2 id="customize">Customize</h2>
+<p>It's also able to customize it, clone this repo and run:</p>
+<pre><code class="language-shell">npm install
+npm start
+</code></pre>
+<p>Then modify <code>src/_custom.scss</code> as you like.</p>
+<pre><code class="language-scss">//
+// Modify variables in this file to Customize your flexbox styles
+//
+
+//
+// Width lower than $width-breakpoint will be treated as mobile devices
+// Default is 1000px
+//
+// $width-breakpoint: 600px;
+
+//
+// This decides the gaps between units in `.units-gap` and `.units-gap-big`
+// Default is 12px
+//
+// $width-gap: 16px;
+</code></pre>
+<h2 id="community">Community</h2>
+<p>Like Mobi.css? Please join the community to discuss new features, open an issue or create pull requests!</p>
+<ul>
+  <li><a href="http://github.com/mobi-css">GitHub organization</a></li>
+  <li><a href="https://twitter.com/mobi_css">Follow us on twitter</a></li>
+  <li><a href="https://gitter.im/mobi-css">Join gitter discuss</a></li>
+  <li><a href="http://blog.getmobicss.com">Read our blogs</a></li>
+</ul>
+  </div>
+</div>
 
         </body>
       </html>
