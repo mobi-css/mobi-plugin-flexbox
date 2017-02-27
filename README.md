@@ -1,3 +1,3 @@
-# mobi-plugin-layout
+# mobi-plugin-flexbox
 
-The layout plugin for Mobi.css
+The flexbox plugin for Mobi.css

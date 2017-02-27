@@ -35,8 +35,6 @@ const postcssConfig = [autoprefixer({ browsers: [
   'last 3 Edge versions',
 ] })];
 
-const PKG_NAME = pkg.name;
-
 const SRC_DIR = path.resolve(__dirname, 'src');
 const DIST_DIR = path.resolve(__dirname, 'dist');
 const PUBLIC_DIR = path.resolve(__dirname, 'docs');
