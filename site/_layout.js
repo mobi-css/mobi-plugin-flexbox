@@ -1,4 +1,4 @@
-module.exports = ({ title, content, relativeToRoot }) => `
+module.exports = ({ content, relativeToRoot }) => `
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,10 +7,10 @@ module.exports = ({ title, content, relativeToRoot }) => `
     <meta name="viewport" content="width=device-width, initial-scale=1.0,
       maximum-scale=1.0, user-scalable=no"/>
     
-    <title>${title}</title>
+    <title>Flexbox</title>
 
     <link rel="stylesheet" href="https://unpkg.com/mobi.css@2.0.0-alpha.1/dist/mobi.min.css" />
-    <link rel="stylesheet" href="${relativeToRoot}/css/mobi-plugin-flexbox.min.css}" />
+    <link rel="stylesheet" href="${relativeToRoot}/css/mobi-plugin-flexbox.min.css" />
 
     <style>
       .text-center {

@@ -1,37 +1,6 @@
-<div class="text-center">
+## Flexbox
 
-# Flexbox - Mobi.css Plugin
-
-The flexbox plugin for [Mobi.css](http://getmobicss.com)
-
-</div>
-
-<div class="flex-center units-gap-big">
-  <div class="unit-0">
-    <a href="https://github.com/mobi-css/mobi-plugin-flexbox/releases" class="btn">Download</a>
-  </div>
-  <div class="unit-0">
-    <a href="https://github.com/mobi-css/mobi-plugin-flexbox/" class="btn">GitHub</a>
-  </div>
-</div>
-
-<hr class="top-gap-big"/>
-
-## Introduction
-
-> Mobi.css is a themeable, pluginable, mobile-first css framework.
-
-This is the flexbox plugin for [Mobi.css](http://getmobicss.com), you can use it within [Mobi.css](http://getmobicss.com) framework, or simply use the [standalone css library](https://github.com/mobi-css/mobi-plugin-flexbox/releases) without using Mobi.css framework.
-
-You can also insert the CDN link to your `<head>` to try the standalone version:
-
-```html
-<link rel="stylesheet" href="https://unpkg.com/mobi-plugin-flexbox/dist/mobi-plugin-flexbox.min.css" />
-```
-
-## Usage
-
-### Flexbox Container and Units
+### Container and Units
 
 First of all, let's create a `.flex-left` container which contains several `.unit`s. In this case, `.flex-left`'s width is divided equally between `.unit`s.
 
@@ -273,41 +242,3 @@ In all of the above examples, the `.unit*` has no left and right paddings, it ma
   <div class="unit-1-4 site-box">.units-gap-big > .unit-1-4</div>
 </div>
 ```
-
-## Customize
-
-It's also able to customize it, clone this repo and run:
-
-```shell
-npm install
-npm start
-```
-
-Then modify `src/_custom.scss` as you like.
-
-```scss
-//
-// Modify variables in this file to Customize your flexbox styles
-//
-
-//
-// Width lower than $width-breakpoint will be treated as mobile devices
-// Default is 1000px
-//
-// $width-breakpoint: 600px;
-
-//
-// This decides the gaps between units in `.units-gap` and `.units-gap-big`
-// Default is 12px
-//
-// $width-gap: 16px;
-```
-
-## Community
-
-Like Mobi.css? Please join the community to discuss new features, open an issue or create pull requests!
-
-- [GitHub organization](http://github.com/mobi-css)
-- [Follow us on twitter](https://twitter.com/mobi_css)
-- [Join gitter discuss](https://gitter.im/mobi-css)
-- [Read our blogs](https://medium.com/@mobi_css)

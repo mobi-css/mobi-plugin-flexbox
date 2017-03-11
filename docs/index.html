@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,
       maximum-scale=1.0, user-scalable=no"/>
     
-    <title>Flexbox - Mobi.css Plugin</title>
+    <title>Flexbox</title>
 
     <link rel="stylesheet" href="https://unpkg.com/mobi.css@2.0.0-alpha.1/dist/mobi.min.css" />
-    <link rel="stylesheet" href="./css/mobi-plugin-flexbox.min.css}" />
+    <link rel="stylesheet" href="./css/mobi-plugin-flexbox.min.css" />
 
     <style>
       .text-center {
@@ -25,29 +25,8 @@
   <body>
     <div class="flex-center">
       <div class="container">
-        <div class="text-center">
-<h1 id="flexbox-mobicss-plugin">Flexbox - Mobi.css Plugin</h1>
-<p>The flexbox plugin for <a href="http://getmobicss.com">Mobi.css</a></p>
-</div>
-<div class="flex-center units-gap-big">
-  <div class="unit-0">
-    <a href="https://github.com/mobi-css/mobi-plugin-flexbox/releases" class="btn">Download</a>
-  </div>
-  <div class="unit-0">
-    <a href="https://github.com/mobi-css/mobi-plugin-flexbox/" class="btn">GitHub</a>
-  </div>
-</div>
-<hr class="top-gap-big"/>
-<h2 id="introduction">Introduction</h2>
-<blockquote>
-<p>Mobi.css is a themeable, pluginable, mobile-first css framework.</p>
-</blockquote>
-<p>This is the flexbox plugin for <a href="http://getmobicss.com">Mobi.css</a>, you can use it within <a href="http://getmobicss.com">Mobi.css</a> framework, or simply use the <a href="https://github.com/mobi-css/mobi-plugin-flexbox/releases">standalone css library</a> without using Mobi.css framework.</p>
-<p>You can also insert the CDN link to your <code>&lt;head&gt;</code> to try the standalone version:</p>
-<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/mobi-plugin-flexbox/dist/mobi-plugin-flexbox.min.css&quot; /&gt;
-</code></pre>
-<h2 id="usage">Usage</h2>
-<h3 id="flexbox-container-and-units">Flexbox Container and Units</h3>
+        <h2 id="flexbox">Flexbox</h2>
+<h3 id="container-and-units">Container and Units</h3>
 <p>First of all, let's create a <code>.flex-left</code> container which contains several <code>.unit</code>s. In this case, <code>.flex-left</code>'s width is divided equally between <code>.unit</code>s.</p>
 <div class="flex-left top-gap text-center">
   <div class="unit site-box">unit</div>
@@ -249,36 +228,6 @@
   &lt;div class=&quot;unit-1-4 site-box&quot;&gt;.units-gap-big &gt; .unit-1-4&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-<h2 id="customize">Customize</h2>
-<p>It's also able to customize it, clone this repo and run:</p>
-<pre><code class="language-shell">npm install
-npm start
-</code></pre>
-<p>Then modify <code>src/_custom.scss</code> as you like.</p>
-<pre><code class="language-scss">//
-// Modify variables in this file to Customize your flexbox styles
-//
-
-//
-// Width lower than $width-breakpoint will be treated as mobile devices
-// Default is 1000px
-//
-// $width-breakpoint: 600px;
-
-//
-// This decides the gaps between units in `.units-gap` and `.units-gap-big`
-// Default is 12px
-//
-// $width-gap: 16px;
-</code></pre>
-<h2 id="community">Community</h2>
-<p>Like Mobi.css? Please join the community to discuss new features, open an issue or create pull requests!</p>
-<ul>
-<li><a href="http://github.com/mobi-css">GitHub organization</a></li>
-<li><a href="https://twitter.com/mobi_css">Follow us on twitter</a></li>
-<li><a href="https://gitter.im/mobi-css">Join gitter discuss</a></li>
-<li><a href="https://medium.com/@mobi_css">Read our blogs</a></li>
-</ul>
 
       </div>
     </div>
