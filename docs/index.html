@@ -25,8 +25,8 @@
   <body>
     <div class="flex-center">
       <div class="container">
-        <h2 id="flexbox">Flexbox</h2>
-<h3 id="container-and-units">Container and Units</h3>
+        <h1 id="flexbox">Flexbox</h1>
+<h2 id="container-and-units">Container and Units</h2>
 <p>First of all, let's create a <code>.flex-left</code> container which contains several <code>.unit</code>s. In this case, <code>.flex-left</code>'s width is divided equally between <code>.unit</code>s.</p>
 <div class="flex-left top-gap text-center">
   <div class="unit site-box">unit</div>
@@ -112,7 +112,7 @@
   &lt;div class=&quot;unit-1-4&quot;&gt;.unit-1-4&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-<h3 id="flexbox-aligning">Flexbox Aligning</h3>
+<h2 id="flexbox-aligning">Flexbox Aligning</h2>
 <p>Forget <code>margin:0 auto</code>. We can align easily with flexbox!</p>
 <div class="flex-left site-box top-gap">
   <div class="site-box">.flex-left > div</div>
@@ -157,7 +157,7 @@
   &lt;div&gt;.flex-center.flex-middle &gt; div&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-<h3 id="vertical-flexbox">Vertical Flexbox</h3>
+<h2 id="vertical-flexbox">Vertical Flexbox</h2>
 <p>We can use <code>.flex-vertical</code> to easily achieve vertical flexbox layout.</p>
 <div class="flex-vertical top-gap text-center" style="height:200px;">
   <div class="unit-0 site-box">.unit-0</div>
@@ -170,7 +170,7 @@
   &lt;div class=&quot;unit-1-4&quot;&gt;.unit-1-4&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-<h3 id="wrapable-flexbox">Wrapable flexbox</h3>
+<h2 id="wrapable-flexbox">Wrapable flexbox</h2>
 <p>By default the <code>flex-wrap</code> of flexbox container is set to <code>nowrap</code>, this is to prevent some unexpected wrap. We can set it to <code>wrap</code> using <code>.flex-wrap</code>:</p>
 <div class="flex-left top-gap text-center">
   <div class="unit-0 site-box">.unit-0 with a lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot lot of text</div>
@@ -193,7 +193,7 @@
   &lt;div class=&quot;unit-1-4&quot;&gt;.unit-1-4&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-<h3 id="unit-1-on-mobile">Unit 1 on Mobile</h3>
+<h2 id="unit-1-on-mobile">Unit 1 on Mobile</h2>
 <p>Sometimes we need to show <code>.unit-1-3</code> on desktop, and <code>.unit-1</code> on mobile. We can use <code>.unit-1-on-mobile</code> inside <code>.flex-wrap</code> to achieve this:</p>
 <div class="flex-left flex-wrap top-gap text-center">
   <div class="unit-1-3 unit-1-on-mobile site-box">.flex-wrap > .unit-1-3.unit-1-on-mobile</div>
@@ -204,7 +204,7 @@
   &lt;div class=&quot;unit-2-3 unit-1-on-mobile&quot;&gt;.flex-wrap &gt; .unit-2-3.unit-1-on-mobile&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-<h3 id="units-gap">Units Gap</h3>
+<h2 id="units-gap">Units Gap</h2>
 <p>In all of the above examples, the <code>.unit*</code> has no left and right paddings, it may not convenient sometimes. We can add <code>.units-gap</code> and <code>.units-gap-big</code> to the flexbox container to add gaps between <code>.unit*</code>s:</p>
 <div class="flex-left units-gap top-gap text-center">
   <div class="unit-0 site-box">.units-gap > .unit-0</div>
