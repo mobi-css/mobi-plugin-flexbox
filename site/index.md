@@ -1,7 +1,3 @@
-
-<div class="flex-center">
-  <div class="container">
-
 <div class="text-center">
 
 # Flexbox - Mobi.css Plugin
@@ -311,12 +307,7 @@ Then modify `src/_custom.scss` as you like.
 
 Like Mobi.css? Please join the community to discuss new features, open an issue or create pull requests!
 
-<ul>
-  <li><a href="http://github.com/mobi-css">GitHub organization</a></li>
-  <li><a href="https://twitter.com/mobi_css">Follow us on twitter</a></li>
-  <li><a href="https://gitter.im/mobi-css">Join gitter discuss</a></li>
-  <li><a href="http://blog.getmobicss.com">Read our blogs</a></li>
-</ul>
-
-  </div>
-</div>
+- [GitHub organization](http://github.com/mobi-css)
+- [Follow us on twitter](https://twitter.com/mobi_css)
+- [Join gitter discuss](https://gitter.im/mobi-css)
+- [Read our blogs](https://medium.com/@mobi_css)
