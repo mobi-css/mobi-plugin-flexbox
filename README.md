@@ -16,7 +16,7 @@ You can also insert the CDN link to your `<head>` to try the standalone version:
 <link rel="stylesheet" href="https://unpkg.com/mobi-plugin-flexbox/dist/mobi-plugin-flexbox.min.css" />
 ```
 
-## Usage
+## Docs
 
 Please checkout [here](https://mobi-css.github.io/mobi-plugin-flexbox/) for usage.
 
