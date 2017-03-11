@@ -1,12 +1,3 @@
-<style>
-  .text-center {
-    text-align: center;
-  }
-  .site-box {
-    border: 1px solid hsla(120, 40%, 55%, 0.3);
-    background-color: hsla(120, 40%, 55%, 0.15);
-  }
-</style>
 
 <div class="flex-center">
   <div class="container">
