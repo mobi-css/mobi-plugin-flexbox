@@ -13,9 +13,6 @@ module.exports = ({ title, content, relativeToRoot }) => `
     <link rel="stylesheet" href="${relativeToRoot}/css/mobi-plugin-flexbox.min.css" />
 
     <style>
-      .text-center {
-        text-align: center;
-      }
       .site-box {
         border: 1px solid hsla(120, 40%, 55%, 0.3);
         background-color: hsla(120, 40%, 55%, 0.15);
