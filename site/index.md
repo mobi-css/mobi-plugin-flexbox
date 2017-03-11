@@ -2,7 +2,7 @@
 
 # Flexbox - Mobi.css Plugin
 
-The built-in flexbox plugin for [Mobi.css](http://getmobicss.com)
+The flexbox plugin for [Mobi.css](http://getmobicss.com)
 
 </div>
 
