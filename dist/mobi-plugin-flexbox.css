@@ -1,4 +1,8 @@
-/* mobi-plugin-flexbox v0.2.0 https://mobi-css.github.io/mobi-plugin-flexbox/ */
+/*!
+ * mobi-plugin-flexbox v0.2.0
+ * https://mobi-css.github.io/mobi-plugin-flexbox/
+ */
+
 .flex-left,
 .flex-center,
 .flex-right,
@@ -201,5 +205,3 @@
     max-width: 100%; }
   .flex-vertical > .unit-1-on-mobile {
     max-height: 100%; } }
-
-/*# sourceMappingURL=mobi-plugin-flexbox.css.map */

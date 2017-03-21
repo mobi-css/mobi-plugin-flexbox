@@ -16,6 +16,7 @@ const debounce = require('debounce');
 const pkg = require('./package.json');
 
 const DEBOUNCE_DELAY = 300;
+const PORT = 8000;
 
 const postcssConfig = [autoprefixer({ browsers: [
   'last 5 iOS versions',
@@ -41,11 +42,11 @@ const SITE_CSS_DIR = path.resolve(__dirname, 'site/css');
 const PUBLIC_DIR = path.resolve(__dirname, 'docs');
 
 gulp.task('default', () => {
-  runSequence('build', 'site:build_css', 'pagic', 'public:serve', () => {
+  runSequence('build', 'serve', () => {
     gulp.watch([
       `${SRC_DIR}/**/*`,
     ], debounce(() => {
-      runSequence('build', 'site:build_css');
+      runSequence('build:src', 'clean:site_css', 'copy:css_to_site');
     }, DEBOUNCE_DELAY));
     gulp.watch([
       `${SITE_DIR}/**/*`,
@@ -56,49 +57,61 @@ gulp.task('default', () => {
 });
 
 gulp.task('build', (callback) => {
+  runSequence('build:src', 'build:site', callback);
+});
+
+gulp.task('build:src', (callback) => {
   runSequence('clean:dist', 'build:css', 'build:css:min', callback);
+});
+
+gulp.task('build:site', (callback) => {
+  runSequence('clean:site_css', 'copy:css_to_site', 'pagic', callback);
 });
 
 gulp.task('clean:dist', () => {
   rimraf.sync(`${DIST_DIR}/*`);
 });
 
-gulp.task('build:css:min', () => gulp.src(`${DIST_DIR}/${pkg.name}.css`)
-  .pipe(sourcemaps.init())
-  .pipe(cleanCSS())
-  .pipe(insert.prepend(`/* ${pkg.name} v${pkg.version} ${pkg.homepage} */\n`))
-  .pipe(rename(`${pkg.name}.min.css`))
-  .pipe(sourcemaps.write('./'))
-  .pipe(gulp.dest(DIST_DIR)));
+gulp.task('build:css', (callback) => {
+  gulp.src(`${SRC_DIR}/${pkg.name}.scss`)
+    .pipe(sass({
+      includePaths: 'node_modules',
+    }).on('error', sass.logError))
+    .pipe(postcss(postcssConfig))
+    .pipe(insert.prepend(`/*!\n * ${pkg.name} v${pkg.version}\n * ${pkg.homepage}\n */\n\n`))
+    .pipe(gulp.dest(DIST_DIR))
+    .on('end', callback);
+});
 
-gulp.task('build:css', () => gulp.src(`${SRC_DIR}/${pkg.name}.scss`)
-  .pipe(sourcemaps.init())
-  .pipe(sass({
-    includePaths: 'node_modules',
-  }).on('error', sass.logError))
-  .pipe(postcss(postcssConfig))
-  .pipe(insert.prepend(`/* ${pkg.name} v${pkg.version} ${pkg.homepage} */\n`))
-  .pipe(sourcemaps.write('./'))
-  .pipe(gulp.dest(DIST_DIR)));
+gulp.task('build:css:min', (callback) => {
+  gulp.src(`${DIST_DIR}/${pkg.name}.css`)
+    .pipe(sourcemaps.init())
+    .pipe(cleanCSS())
+    .pipe(rename(`${pkg.name}.min.css`))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(DIST_DIR))
+    .on('end', callback);
+});
 
-gulp.task('site:build_css', ['site:clean_css', 'site:copy_css']);
-
-gulp.task('site:clean_css', () => {
+gulp.task('clean:site_css', () => {
   rimraf.sync(`${SITE_CSS_DIR}/*`);
 });
 
-gulp.task('site:copy_css', () => gulp.src(`${DIST_DIR}/**/*`)
-  .pipe(gulp.dest(SITE_CSS_DIR)));
+gulp.task('copy:css_to_site', (callback) => {
+  gulp.src(`${DIST_DIR}/**/*`)
+    .pipe(gulp.dest(SITE_CSS_DIR))
+    .on('end', callback);
+});
 
 gulp.task('pagic', () => {
   const pagic = new Pagic();
   pagic.build();
 });
 
-gulp.task('public:serve', () => {
+gulp.task('serve', () => {
   http.createServer(
     ecstatic({ root: PUBLIC_DIR })
-  ).listen(8000);
+  ).listen(PORT);
 
-  console.log(`ecstatic serving ${PUBLIC_DIR} at http://0.0.0.0:8000`);
+  console.log(`ecstatic serving ${PUBLIC_DIR} at http://0.0.0.0:${PORT}`);
 });
