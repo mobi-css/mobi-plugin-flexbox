@@ -9,7 +9,7 @@ module.exports = ({ title, content, relativeToRoot }) => `
     
     <title>${title}</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/mobi.css@2.0.0-alpha.2/dist/mobi.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/mobi.css/dist/mobi.min.css" />
     <link rel="stylesheet" href="${relativeToRoot}/css/mobi-plugin-flexbox.min.css" />
 
     <style>
