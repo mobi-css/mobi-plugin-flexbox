@@ -1,6 +1,6 @@
 {
   "name": "mobi-plugin-flexbox",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "The flexbox plugin for Mobi.css",
   "main": "index.scss",
   "scripts": {
