@@ -41,7 +41,6 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
-    "mobi-theme-base": "^0.2.5",
     "pagic": "^0.5.0",
     "rimraf": "^2.5.4",
     "run-sequence": "^1.2.2",
@@ -49,6 +48,6 @@
     "stylelint-config-standard": "^16.0.0"
   },
   "dependencies": {
-    "mobi-theme-base": "^0.2.3"
+    "mobi-theme-base": "^0.2.5"
   }
 }
