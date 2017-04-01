@@ -1,5 +1,7 @@
 # Flexbox
 
+> Use flexbox to layout.
+
 ## Container and Units
 
 First of all, let's create a `.flex-left` container which contains several `.unit`s. In this case, `.flex-left`'s width is divided equally between `.unit`s.
@@ -55,6 +57,9 @@ Secondly, let's see how to achieve a maximum 4# grid.
 </div>
 
 ```html
+<div class="flex-left">
+  <div class="unit-1">.unit-1</div>
+</div>
 <div class="flex-left">
   <div class="unit-1-2">.unit-1-2</div>
   <div class="unit-1-2">.unit-1-2</div>
