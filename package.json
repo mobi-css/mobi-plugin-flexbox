@@ -1,6 +1,6 @@
 {
   "name": "mobi-plugin-flexbox",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Use flexbox to layout.",
   "main": "index.scss",
   "scripts": {
