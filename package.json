@@ -1,7 +1,7 @@
 {
   "name": "mobi-plugin-flexbox",
   "version": "0.2.5",
-  "description": "The flexbox plugin for Mobi.css",
+  "description": "Use flexbox to layout.",
   "main": "index.scss",
   "scripts": {
     "start": "gulp",
@@ -41,13 +41,13 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.6.0",
-    "pagic": "^0.5.0",
+    "pagic": "^0.6.0",
     "rimraf": "^2.5.4",
     "run-sequence": "^1.2.2",
     "stylelint": "^7.9.0",
     "stylelint-config-standard": "^16.0.0"
   },
   "dependencies": {
-    "mobi-theme-base": "^0.2.5"
+    "mobi-theme-base": "^0.2.6"
   }
 }

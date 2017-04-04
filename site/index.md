@@ -2,7 +2,7 @@
 
 > Use flexbox to layout.
 
-## Container and Units
+## Container and units
 
 First of all, let's create a `.flex-left` container which contains several `.unit`s. In this case, `.flex-left`'s width is divided equally between `.unit`s.
 
@@ -104,7 +104,7 @@ Finally, we can use `.unit-0` as a custom size unit. Set a width to it, or let t
 </div>
 ```
 
-## Flexbox Aligning
+## Flexbox aligning
 
 Forget `margin:0 auto`. We can align easily with flexbox!
 
@@ -154,7 +154,7 @@ Forget `margin:0 auto`. We can align easily with flexbox!
 </div>
 ```
 
-## Vertical Flexbox
+## Vertical flexbox
 
 We can use `.flex-vertical` to easily achieve vertical flexbox layout.
 
@@ -200,7 +200,7 @@ By default the `flex-wrap` of flexbox container is set to `nowrap`, this is to p
 </div>
 ```
 
-## Unit 1 on Mobile
+## Unit 1 on mobile
 
 Sometimes we need to show `.unit-1-3` on desktop, and `.unit-1` on mobile. We can use `.unit-1-on-mobile` inside `.flex-wrap` to achieve this:
 
@@ -216,7 +216,7 @@ Sometimes we need to show `.unit-1-3` on desktop, and `.unit-1` on mobile. We ca
 </div>
 ```
 
-## Units Gap
+## Units gap
 
 In all of the above examples, the `.unit*` has no left and right paddings, it may not convenient sometimes. We can add `.units-gap` and `.units-gap-big` to the flexbox container to add gaps between `.unit*`s:
 
